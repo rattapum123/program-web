@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>เช้าสดใส อาจจะยังน้า</title>
+        <style>
+            h4 {
+                color: #d127c9;
+                font-size: xx-large;
+                text-align: center;
+            }
+            body{
+                background-color: #37dd77;
+            }
+            p{
+                font-size: medium;
+                text-align: center;
+            }
+            img{
+                width: 10%;
+                background-color: rgb(21, 228, 73);
+                padding: 10%;
+                border-color: rgb(255, 252, 78);
+                border-width: 30;
+                border-style: dotted;
+                border-radius: 50%;
+            }
+            button{
+                text-align: center;
+                font-size: medium;
+                background-color: #37dd77;
+                border-radius:  30%;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title-text" style="color: rgba(23, 54, 231, 0.829); font-size: 50px; background-color: rgb(190, 230, 47); text-align: center;">ยิ้มก่อนอ่าน ตาหวานก่อนเปิด</h1>
+        <h1 style="color: rgb(255, 0, 0); text-align: center;">นาราช่องจริง</h1>
+        <p style="color: #d127c9; text-align: center;">ชาเขียวปุยนุ้น</p>
+        <a href="https://www.lazada.co.th/products/puiinun-matcha-s-mix-plus-1-15-i5751585181.html">เรียนเว็บเพิ่มเติม</a>
+        <br>
+        <br>
+        <img id= "width-img"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJhVvMv72KCfi-RJSFNsrE4z9NhvMLTvc1Bg&s">
+        <br>
+        <br>
+        <button onclick="sayHello()">คลิกที่นี้สิจ่ะ</button>
+        <script>
+            let myname = 'คุณฟิล์ม'
+            function sayHello() {
+            alert('สวัสดีค้าบ' + myname)
+            const textTitleElemnt = document.getElementById('title-text')
+            textTitleElemnt.innerText = 'สวัสดีค้าบ' + myname
+            textTitleElemnt.style = 'color: red; font-size: 60px; text-align: center;'
+
+            const wedImage = document.getElementById('width-img')
+            wedImage.src = "https://i.pinimg.com/736x/f4/f9/91/f4f9915e9db090cf6a0180f4c24b1bef.jpg"
+            }
+        </script>
+    </body>
+</html>

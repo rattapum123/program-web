@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>แบบฝึกหัดที่5</title>
+    <style>
+        input {
+            height: 50px;
+            width: 300px;
+            border-radius: 10px;
+            font-size: 15px;
+            color: #000000;
+        }
+
+        select {
+            height: 50px;
+            width: 300px;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>แบบฝึกหัดที่5</h2>
+
+    <input id="msg-input" placeholder="กรุณากรอกชื่อ" type="text">
+    <p id="show-msg">ยินดีต้อนรับ</p>
+    <h2>ภาษาโปรเเกมที่ชอบ</h2>
+
+    <p id="show-select-msg">คุณเลือกภาษา</p>
+    <select id="select-input">
+        <option>โปรดเลือกตัวเลือกใดก็ได้</option>
+        <option>JavaScript</option>
+        <option>Python</option>
+        <option>Go</option>
+        <option>ไม่มี</option>
+    </select>
+    <script>
+        const msgInputElement = document.getElementById('msg-input')
+        msgInputElement.addEventListener("input", function () {
+            const msg = this.value
+            const showMagElement = document.getElementById('show-msg')
+            showMagElement.innerText = 'ยินดีต้อนรับ: ' + msg
+        })
+        const msgSelectElement = document.getElementById('select-input')
+        msgSelectElement.addEventListener("input", function () {
+            const msg = this.value
+            const showMagElement = document.getElementById('show-select-msg')
+            showMagElement.innerText = 'คุณเลือกภาษา: ' + msg
+        })
+    </script>
+</body>
+
+</html>

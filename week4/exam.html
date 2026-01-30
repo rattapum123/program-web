@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - BOM Exercise</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        
+        button { 
+            margin: 10px 5px; 
+            padding: 10px 20px; 
+            cursor: pointer; 
+        }
+        #display { 
+            margin-top: 20px; 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Week 4 - Project Overview</h1>
+    </div>
+
+    <button onclick="showInfo()">แสดงข้อมูลผู้ใช้</button>
+    <button onclick="reloadPage()">รีเฟรชหน้า</button>
+    <button onclick="openNewTab()">เปิดหน้าต่างใหม่</button>
+
+    <div id="display">
+        <p id="greeting">ยินดีต้อนรับ</p>
+        <div id="user-data"></div>
+    </div>
+
+    <script>
+        
+        window.onload = function() {
+            const name = window.prompt("กรุณากรอกชื่อของคุณ");
+            if (name) {
+                document.getElementById("greeting").innerText = "สวัสดีคุณ " + name;
+            }
+        };
+
+        
+        function showInfo() {
+            const info = 'User Agent: ${navigator.userAgent}\nLanguage: ${navigator.language}\nWidth: ${screen.width}\nHeight: ${screen.height'};
+            // แสดงผลทั้งใน alert และบนหน้าเว็บ (div) ตามโจทย์
+            alert(info);
+            document.getElementById("user-data").innerText = info;
+        
+
+        
+        function reloadPage() {
+            location.reload();
+        }
+
+        function openNewTab() {
+            window.open("https://example.com");
+        }
+    </script>
+</body>
+</html>
